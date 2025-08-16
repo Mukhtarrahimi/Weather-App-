@@ -31,12 +31,10 @@ logo_image = PhotoImage(file="images/Copy of logo.png")
 my_image_logo = Label(image=logo_image)
 my_image_logo.place(x=150, y=100)
 
-
-
-
-
-
-
+# bottom box
+frame_image = PhotoImage(file="images/Copy of box (1).png")
+my_image_frame = Label(image=frame_image)
+my_image_frame.pack(padx=5, pady=5, side=BOTTOM)
 
 
 root.mainloop()
