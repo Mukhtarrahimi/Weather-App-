@@ -7,8 +7,8 @@ from timezonefinder import TimezoneFinder
 import requests
 import pytz
 
-# API setting
-API_KEY = "" 
+# ---------- تنظیمات ----------
+API_KEY = ""  # <-- کلید OpenWeatherMap خودت را اینجا بگذار (مثلاً "abcd1234...")
 WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
@@ -55,6 +55,7 @@ def getWeather():
         resp.raise_for_status()
         json_data = resp.json()
 
+        # اگر شهر نامعتبر بود (کدهای خطا از API)
         if str(json_data.get("cod")) != "200":
             msg = json_data.get("message", "Unknown error")
             messagebox.showerror("API Error", f"OpenWeather error: {msg}")
