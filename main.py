@@ -8,6 +8,19 @@ import requests
 import pytz
 
 
+# function
+def getWeather():
+    city= textfield.get()
+    
+    geolocator = Nominatim(user_agent="geoapiExercises")
+    location = geolocator.geocode(city)
+    obj = TimezoneFinder()
+    result = obj.timezone_at(lat=location.logitude, lng=location.longitude)
+    print(result)
+    home = pytz.timezone(result)
+    local_time = datetime.now(home)
+    current_time = local_time.strftime("%I:%M %p")
+
 root = Tk()
 root.title("Weather App")
 root.resizable(False, False)
@@ -23,7 +36,7 @@ textfield.place(x=50, y=40)
 textfield.focus()
 
 search_icon = PhotoImage(file="images/Copy of search_icon (1).png")
-my_image_icon = Button(image=search_icon, borderwidth=0, cursor="hand2", bg="#404040", activebackground="#404040")
+my_image_icon = Button(image=search_icon, borderwidth=0, cursor="hand2", bg="#404040", activebackground="#404040", command=getWeather)
 my_image_icon.place(x=400, y=34)
 
 # logo
