@@ -49,4 +49,19 @@ label3.place(x=420, y=400)
 label4 = Label(root, text="PRESSURE", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
 label4.place(x=650, y=400)
 
+t = Label(font=('arial', 70, 'bold'), fg='#ee666d')
+t.place(x=400, y=150)
+c = Label(font=('arial', 15, 'bold'), fg='#ee666d')
+c.place(x=400, y=250)
+
+w= Label(text='...', font=('arial', 20, 'bold'), bg="#1ab5ef")
+w.place(x=120, y=430)
+h= Label(text='...', font=('arial', 20, 'bold'), bg="#1ab5ef")
+h.place(x=300, y=430)
+d= Label(text='...', font=('arial', 20, 'bold'), bg="#1ab5ef")
+d.place(x=500, y=430)
+p= Label(text='...', font=('arial', 20, 'bold'), bg="#1ab5ef")
+p.place(x=720, y=430)
+
+
 root.mainloop()
