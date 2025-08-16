@@ -36,5 +36,17 @@ frame_image = PhotoImage(file="images/Copy of box (1).png")
 my_image_frame = Label(image=frame_image)
 my_image_frame.pack(padx=5, pady=5, side=BOTTOM)
 
+# label
+label1 = Label(root, text="WIND", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
+label1.place(x=100, y=400)
+
+label2 = Label(root, text="HUMIDITY", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
+label2.place(x=240, y=400)
+
+label3 = Label(root, text="DESCRIPTION", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
+label3.place(x=420, y=400)
+
+label4 = Label(root, text="PRESSURE", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
+label4.place(x=650, y=400)
 
 root.mainloop()
