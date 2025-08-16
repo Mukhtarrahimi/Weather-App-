@@ -49,6 +49,12 @@ frame_image = PhotoImage(file="images/Copy of box (1).png")
 my_image_frame = Label(image=frame_image)
 my_image_frame.pack(padx=5, pady=5, side=BOTTOM)
 
+# time
+name=Label(root, font=('arial', 70, 'bold'))
+name.place(x=30, y=100)
+clock = Label(root, font=('Helvetica', 20))
+clock.place(x=30, y=13)
+
 # label
 label1 = Label(root, text="WIND", font=('Helvetica', 20, 'bold'), bg="#1ab5ef", fg="white")
 label1.place(x=100, y=400)
