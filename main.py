@@ -23,6 +23,24 @@ def getWeather():
     clock.config(text=current_time)
     name.config(text="CURRENT WEATHER OF")
 
+# weather api
+api ="api + city + api key"
+condition = json_data['weather'][0]['main']
+description = json_data['weather'][0]['description']
+temp = int(json_data['main']['temp']-273.15)
+pressure = json_data['main']['pressure']
+humidity = json_data['main']['humidity']
+wind = json_data['wind']['speed']
+
+t.config(text=str(temp) + "°C")
+c.config(text=condition + " | " + description)
+
+w.config(text=str(wind) + " km/h")
+h.config(text=str(humidity))
+d.config(text=description)
+p.config(text=str(pressure))
+
+
 root = Tk()
 root.title("Weather App")
 root.resizable(False, False)
