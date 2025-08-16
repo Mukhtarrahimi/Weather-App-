@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from geopy.geocoders import Nominatim
 from datetime import datetime
-# from timezonefinder import TimezoneFinder
+from timezonefinder import TimezoneFinder
 import requests
 import pytz
 
@@ -26,6 +26,10 @@ search_icon = PhotoImage(file="images/Copy of search_icon (1).png")
 my_image_icon = Button(image=search_icon, borderwidth=0, cursor="hand2", bg="#404040", activebackground="#404040")
 my_image_icon.place(x=400, y=34)
 
+# logo
+logo_image = PhotoImage(file="images/Copy of logo.png")
+my_image_logo = Label(image=logo_image)
+my_image_logo.place(x=150, y=100)
 
 
 
